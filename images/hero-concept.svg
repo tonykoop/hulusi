@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Arial, sans-serif">
+  <title>Hulusi F-key — concept hero (placeholder)</title>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#fff8ec"/>
+      <stop offset="100%" stop-color="#e6dac4"/>
+    </radialGradient>
+    <linearGradient id="walnut" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5a2b"/>
+      <stop offset="100%" stop-color="#5a3818"/>
+    </linearGradient>
+    <linearGradient id="pakka" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7a5230"/>
+      <stop offset="100%" stop-color="#4d3320"/>
+    </linearGradient>
+    <linearGradient id="brassgrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e6c558"/>
+      <stop offset="100%" stop-color="#a78018"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Mouthpiece -->
+  <rect x="385" y="60" width="30" height="40" rx="3" fill="url(#walnut)" stroke="#3a2410"/>
+  <ellipse cx="400" cy="62" rx="14" ry="3" fill="#1a0a00"/>
+
+  <!-- Gourd -->
+  <path d="M 320 100
+           Q 305 130 290 200
+           Q 275 280 290 320
+           Q 310 350 340 350
+           L 460 350
+           Q 490 350 510 320
+           Q 525 280 510 200
+           Q 495 130 480 100 Z"
+        fill="url(#walnut)" stroke="#2a1808" stroke-width="2"/>
+  <!-- Highlight -->
+  <ellipse cx="345" cy="220" rx="22" ry="55" fill="#c89d6a" opacity="0.35"/>
+
+  <!-- Three pipes -->
+  <rect x="335" y="350" width="22" height="100" rx="2" fill="url(#pakka)" stroke="#2a1810"/>
+  <rect x="389" y="350" width="22" height="140" rx="2" fill="url(#pakka)" stroke="#2a1810"/>
+  <rect x="443" y="350" width="22" height="115" rx="2" fill="url(#pakka)" stroke="#2a1810"/>
+
+  <!-- Finger holes on melody -->
+  <circle cx="395" cy="375" r="2.5" fill="#1a0a00"/>
+  <circle cx="395" cy="395" r="2.5" fill="#1a0a00"/>
+  <circle cx="395" cy="415" r="2.5" fill="#1a0a00"/>
+  <circle cx="395" cy="435" r="2.5" fill="#1a0a00"/>
+  <circle cx="395" cy="455" r="2.5" fill="#1a0a00"/>
+  <circle cx="395" cy="475" r="2.5" fill="#1a0a00"/>
+
+  <!-- Brass binding ring at gourd-pipe joint -->
+  <rect x="320" y="345" width="160" height="8" fill="url(#brassgrad)" stroke="#7a5e10"/>
+
+  <!-- Tassel -->
+  <line x1="400" y1="100" x2="400" y2="60" stroke="#a91a1a" stroke-width="1"/>
+  <path d="M 392 60 Q 396 75 400 78 Q 404 75 408 60 Z" fill="#a91a1a"/>
+  <line x1="396" y1="78" x2="394" y2="92" stroke="#a91a1a" stroke-width="0.8"/>
+  <line x1="400" y1="78" x2="400" y2="94" stroke="#a91a1a" stroke-width="0.8"/>
+  <line x1="404" y1="78" x2="406" y2="92" stroke="#a91a1a" stroke-width="0.8"/>
+
+  <!-- Caption -->
+  <text x="400" y="475" text-anchor="middle" font-size="11" fill="#777" font-style="italic">Concept render — replace with HUL-P2 photo after first build</text>
+</svg>

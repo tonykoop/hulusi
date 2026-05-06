@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <title>Hulusi F-key — Centerline Section</title>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#333"/>
+    </marker>
+    <pattern id="wood" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#caa37a"/>
+      <line x1="0" y1="0" x2="6" y2="0" stroke="#a8825c" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="brass" patternUnits="userSpaceOnUse" width="3" height="3">
+      <rect width="3" height="3" fill="#d4a937"/>
+    </pattern>
+  </defs>
+
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold">Hulusi (F-key) — Centerline Section</text>
+  <text x="400" y="48" text-anchor="middle" font-size="11" fill="#555">All dimensions live from hulusi-design-table.xlsx Master_Inputs</text>
+
+  <!-- Mouthpiece -->
+  <rect x="380" y="60" width="40" height="50" fill="url(#wood)" stroke="#333"/>
+  <text x="400" y="82" text-anchor="middle" font-size="10">mouthpiece</text>
+  <line x1="395" y1="60" x2="395" y2="110" stroke="#fff" stroke-width="6"/>
+
+  <!-- Gourd outline -->
+  <path d="M 320 110
+           Q 310 130 295 180
+           Q 280 250 285 290
+           Q 295 320 320 320
+           L 480 320
+           Q 505 320 515 290
+           Q 520 250 505 180
+           Q 490 130 480 110 Z"
+        fill="url(#wood)" stroke="#333" stroke-width="2"/>
+  <!-- Gourd inner cavity -->
+  <path d="M 330 120
+           Q 320 145 305 195
+           Q 295 250 300 285
+           Q 308 305 325 305
+           L 475 305
+           Q 492 305 500 285
+           Q 505 250 495 195
+           Q 480 145 470 120 Z"
+        fill="#fff" stroke="#666" stroke-dasharray="3 2"/>
+  <text x="400" y="220" text-anchor="middle" font-size="11" fill="#555" font-style="italic">gourd wind chest</text>
+  <text x="400" y="240" text-anchor="middle" font-size="10" fill="#555">V ≈ gourd_volume_in3</text>
+
+  <!-- Three pipes hanging from gourd base -->
+  <!-- Drone 2 (octave, leftmost, shortest) -->
+  <rect x="335" y="320" width="30" height="155" fill="url(#wood)" stroke="#333"/>
+  <rect x="343" y="320" width="14" height="155" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <text x="350" y="500" text-anchor="middle" font-size="11" fill="#333">Drone 2</text>
+  <text x="350" y="514" text-anchor="middle" font-size="10" fill="#555">octave</text>
+  <text x="350" y="528" text-anchor="middle" font-size="10" fill="#555">5.20 in</text>
+  <!-- Drone 2 reed slot -->
+  <rect x="346" y="328" width="8" height="2" fill="url(#brass)" stroke="#333"/>
+  <text x="370" y="332" font-size="9" fill="#888">reed</text>
+
+  <!-- Melody (center, longest of the 3 here, with finger holes) -->
+  <rect x="385" y="320" width="30" height="220" fill="url(#wood)" stroke="#333"/>
+  <rect x="393" y="320" width="14" height="220" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <text x="400" y="555" text-anchor="middle" font-size="11" fill="#333">Melody</text>
+  <text x="400" y="569" text-anchor="middle" font-size="10" fill="#555">7 holes</text>
+  <text x="400" y="583" text-anchor="middle" font-size="10" fill="#555">10.05 in</text>
+  <!-- Melody reed slot -->
+  <rect x="396" y="328" width="8" height="2" fill="url(#brass)" stroke="#333"/>
+  <!-- Finger holes (positions per Holes!E:E for F-key, scaled to drawing) -->
+  <circle cx="385" cy="368" r="2.5" fill="#333"/>
+  <circle cx="385" cy="397" r="2.5" fill="#333"/>
+  <circle cx="385" cy="411" r="2.5" fill="#333"/>
+  <circle cx="385" cy="436" r="2.5" fill="#333"/>
+  <circle cx="385" cy="458" r="2.5" fill="#333"/>
+  <circle cx="385" cy="478" r="2.5" fill="#333"/>
+  <circle cx="415" cy="487" r="2.5" fill="#333"/>
+  <text x="370" y="372" font-size="8" fill="#666" text-anchor="end">h1</text>
+  <text x="370" y="491" font-size="8" fill="#666" text-anchor="end">h6</text>
+  <text x="424" y="491" font-size="8" fill="#666">h7</text>
+
+  <!-- Drone 1 (5th, rightmost, mid-length) -->
+  <rect x="435" y="320" width="30" height="180" fill="url(#wood)" stroke="#333"/>
+  <rect x="443" y="320" width="14" height="180" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <text x="450" y="520" text-anchor="middle" font-size="11" fill="#333">Drone 1</text>
+  <text x="450" y="534" text-anchor="middle" font-size="10" fill="#555">5th</text>
+  <text x="450" y="548" text-anchor="middle" font-size="10" fill="#555">6.82 in</text>
+  <!-- Drone 1 reed slot -->
+  <rect x="446" y="328" width="8" height="2" fill="url(#brass)" stroke="#333"/>
+
+  <!-- Air-flow arrows -->
+  <line x1="400" y1="115" x2="400" y2="160" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4 2"/>
+  <text x="410" y="140" font-size="10" fill="#1976d2">air in</text>
+  <line x1="350" y1="475" x2="350" y2="495" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4 2"/>
+  <line x1="400" y1="540" x2="400" y2="560" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4 2"/>
+  <line x1="450" y1="500" x2="450" y2="520" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4 2"/>
+
+  <!-- Dimension callouts -->
+  <line x1="540" y1="320" x2="540" y2="540" stroke="#333" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="550" y="430" font-size="11" fill="#333">mel pipe = 10.05 in</text>
+  <text x="550" y="446" font-size="9" fill="#888">Pipes!B15</text>
+
+  <line x1="320" y1="100" x2="480" y2="100" stroke="#333" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="400" y="92" font-size="11" fill="#333" text-anchor="middle">gourd_belly_OD = 4.50 in</text>
+
+  <!-- Legend -->
+  <rect x="610" y="80" width="170" height="190" fill="#fafafa" stroke="#999"/>
+  <text x="620" y="100" font-size="11" font-weight="bold">Legend</text>
+  <rect x="620" y="110" width="14" height="10" fill="url(#wood)" stroke="#333"/>
+  <text x="640" y="119" font-size="10">Walnut / Pakkawood</text>
+  <rect x="620" y="128" width="14" height="10" fill="url(#brass)" stroke="#333"/>
+  <text x="640" y="137" font-size="10">Brass C26000 reed</text>
+  <rect x="620" y="146" width="14" height="10" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <text x="640" y="155" font-size="10">Air cavity / bore</text>
+  <line x1="620" y1="170" x2="634" y2="170" stroke="#1976d2" stroke-dasharray="4 2"/>
+  <text x="640" y="173" font-size="10">Air flow path</text>
+  <text x="620" y="200" font-size="10" fill="#555">All values from F-key</text>
+  <text x="620" y="214" font-size="10" fill="#555">(key_midi = 65)</text>
+  <text x="620" y="240" font-size="9" fill="#888">f_tonic = 349.23 Hz</text>
+  <text x="620" y="254" font-size="9" fill="#888">drone1 = +7 st</text>
+  <text x="620" y="268" font-size="9" fill="#888">drone2 = +12 st</text>
+</svg>

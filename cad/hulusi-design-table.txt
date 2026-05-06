@@ -1,0 +1,99 @@
+# Hulusi — SolidWorks Global-Variable Parity Reference
+# ====================================================
+#
+# This file mirrors the named ranges in hulusi-design-table.xlsx
+# Master_Inputs sheet.  EVERY variable name MUST match between:
+#   1. Excel:        Master_Inputs!C column (named global)
+#   2. OpenSCAD:     cad/hulusi_master.scad top-of-file params
+#   3. SolidWorks:   Tools → Equations → Manage → Global Variables
+#
+# Keep this file up to date.  If the Excel workbook changes a
+# variable name, change it here AND in the SCAD file in the same
+# commit.  Drift between Excel/SW/SCAD = silent build errors.
+#
+# Generated: 2026-05-05
+# ====================================================
+
+# --- Acoustic constants ---
+c_speed              = 13552       # in/s, speed of sound at 68°F
+A4_ref               = 440         # Hz, concert pitch reference
+
+# --- Key (selected) ---
+key_midi             = 65          # 58=Bb, 60=C, 62=D, 65=F, 67=G
+f_tonic              = "= A4_ref * 2 ^ ( ( key_midi - 69 ) / 12 )"
+
+# --- Gourd ---
+gourd_volume_in3     = 25          # in^3
+gourd_neck_OD        = 1.10        # in
+gourd_belly_OD       = 4.50        # in
+gourd_height         = 6.50        # in
+gourd_wall           = 0.20        # in
+gourd_species        = "Walnut"    # text — informational only in SW
+
+# --- Melody pipe ---
+mel_bore_ID          = 0.500       # in
+mel_wall             = 0.125       # in
+mel_hole_dia         = 0.275       # in
+mel_hole_count       = 7           # 6 front + 1 thumb
+mel_reed_pad         = 0.50        # in
+mel_wood             = "Pakkawood"
+
+# --- Drone 1 (5th) ---
+dr1_bore_ID          = 0.500       # in
+dr1_target_offset    = 7           # semitones above tonic
+dr1_reed_pad         = 0.50        # in
+
+# --- Drone 2 (octave / wax) ---
+dr2_bore_ID          = 0.500       # in
+dr2_target_offset    = 12          # semitones above tonic
+dr2_reed_pad         = 0.50        # in
+
+# --- Reed material (brass C26000 default) ---
+reed_E_psi           = 14500000    # psi
+reed_rho             = 0.307       # lb/in^3
+reed_K_imperial      = 27300       # derived constant
+reed_thickness       = 0.008       # in
+reed_tongue_w        = 0.157       # in
+reed_slot_clear      = 0.003       # in per side
+reed_material        = "Brass C26000"
+
+# --- Empirical corrections ---
+pull_down_cents      = -30         # cents — reed cut sharp
+correction_pct       = 0           # % — global pipe-length scale
+end_corr_k           = 0.6         # Levine-Schwinger unflanged
+
+# ====================================================
+# Derived quantities (compute in SW from globals above)
+# ====================================================
+#
+# Pipe total cut length (each pipe i):
+#   total_L_i = (c_speed / (4 * f_target_i) - end_corr_k * bore_i / 2)
+#               * (1 + correction_pct / 100) + reed_pad_i
+#
+#   where f_target_mel = f_tonic
+#         f_target_dr1 = f_tonic * 2^(dr1_target_offset/12)
+#         f_target_dr2 = f_tonic * 2^(dr2_target_offset/12)
+#
+# Reed tongue length (each pipe i):
+#   reed_L_i = sqrt(reed_K_imperial * reed_thickness
+#               / (f_target_i * 2^(pull_down_cents/1200)))
+#
+# Finger hole distance from foot (hole at semitone offset s):
+#   d_hole = (c_speed / (4 * f_tonic) - end_corr_k * mel_bore_ID/2)
+#          * (f_tonic / (f_tonic * 2^(s/12)))
+#
+# Reed slot width:
+#   slot_w = reed_tongue_w + 2 * reed_slot_clear
+#
+# ====================================================
+# Family configurations (key_midi values)
+# ====================================================
+#  HUL-Bb : key_midi = 58
+#  HUL-C  : key_midi = 60
+#  HUL-D  : key_midi = 62
+#  HUL-F  : key_midi = 65    ← STANDARD (prototype 1)
+#  HUL-G  : key_midi = 67
+#
+# In SolidWorks: create a Configuration for each, where
+# key_midi is the configured global. Every other dimension
+# is derived from it via the formulas above.

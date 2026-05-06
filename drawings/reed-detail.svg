@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Arial, sans-serif">
+  <title>Hulusi reed detail (×4 enlargement)</title>
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#333"/>
+    </marker>
+    <pattern id="brass2" patternUnits="userSpaceOnUse" width="3" height="3">
+      <rect width="3" height="3" fill="#d4a937"/>
+      <line x1="0" y1="0" x2="3" y2="3" stroke="#b88c20" stroke-width="0.3"/>
+    </pattern>
+    <pattern id="wax" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#f0d488"/>
+    </pattern>
+  </defs>
+
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold">Reed Detail (4×)</text>
+  <text x="400" y="48" text-anchor="middle" font-size="11" fill="#555">Brass C26000 cantilever free reed — F-key melody, dimensions live from Pipes!B19, B21</text>
+
+  <!-- Top view: frame plate with slot + tongue centered in slot -->
+  <g transform="translate(80, 80)">
+    <text x="160" y="-10" text-anchor="middle" font-size="13" font-weight="bold">Top view (frame + tongue)</text>
+    <!-- Frame plate (brass 0.040) -->
+    <rect x="0" y="0" width="320" height="180" fill="url(#brass2)" stroke="#333"/>
+    <!-- Slot (long axis vertical) — width = tongue + 2*clear -->
+    <rect x="135" y="30" width="50" height="120" fill="#fff" stroke="#333"/>
+    <!-- Tongue, slightly inset on all sides -->
+    <rect x="142" y="35" width="36" height="110" fill="url(#brass2)" stroke="#222"/>
+    <!-- Glue line at root -->
+    <rect x="142" y="138" width="36" height="7" fill="#cc4444" stroke="none" opacity="0.7"/>
+    <text x="220" y="146" font-size="9" fill="#a33">CA glue (root)</text>
+
+    <!-- Tongue length callout -->
+    <line x1="120" y1="35" x2="120" y2="138" stroke="#333" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="115" y="92" text-anchor="end" font-size="11" font-weight="bold">L = 0.798 in</text>
+    <text x="115" y="106" text-anchor="end" font-size="9" fill="#888">Pipes!B19 (F-key)</text>
+
+    <!-- Slot width callout -->
+    <line x1="135" y1="170" x2="185" y2="170" stroke="#333" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="160" y="186" text-anchor="middle" font-size="11">slot 0.163 in</text>
+
+    <!-- Tongue width callout -->
+    <line x1="142" y1="-5" x2="178" y2="-5" stroke="#666" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="160" y="-12" text-anchor="middle" font-size="10">tongue 0.157 in</text>
+    <text x="160" y="200" text-anchor="middle" font-size="9" fill="#888">clearance ~0.003 in / side</text>
+  </g>
+
+  <!-- Side section: tongue mounted on frame, in pipe wall, with wax fillet -->
+  <g transform="translate(440, 80)">
+    <text x="160" y="-10" text-anchor="middle" font-size="13" font-weight="bold">Section through pipe top</text>
+
+    <!-- Pipe wall -->
+    <rect x="0" y="50" width="20" height="170" fill="#caa37a" stroke="#333"/>
+    <rect x="300" y="50" width="20" height="170" fill="#caa37a" stroke="#333"/>
+    <!-- Bore inside -->
+    <rect x="20" y="50" width="280" height="170" fill="#fff" stroke="none"/>
+
+    <!-- Frame plate sitting across pipe top -->
+    <rect x="0" y="40" width="320" height="14" fill="url(#brass2)" stroke="#333"/>
+
+    <!-- Tongue (lying flat over slot, free end pointing into pipe) -->
+    <polygon points="80,46 240,46 240,52 100,57 80,52" fill="url(#brass2)" stroke="#333"/>
+    <text x="160" y="38" text-anchor="middle" font-size="10" fill="#555">brass tongue 0.008 in (free-vibrating)</text>
+
+    <!-- Wax fillet at frame-to-pipe interface -->
+    <path d="M 0 40 L 0 50 L 6 56 L 6 50 Z" fill="url(#wax)" stroke="#666"/>
+    <path d="M 320 40 L 320 50 L 314 56 L 314 50 Z" fill="url(#wax)" stroke="#666"/>
+    <text x="20" y="80" font-size="10" fill="#a93">beeswax + rosin seal</text>
+    <line x1="55" y1="78" x2="10" y2="56" stroke="#a93" stroke-width="0.7"/>
+
+    <!-- Air flow arrow (from above into pipe, past tongue) -->
+    <line x1="160" y1="20" x2="160" y2="48" stroke="#1976d2" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#arr2)"/>
+    <text x="170" y="32" font-size="10" fill="#1976d2">air in (from gourd)</text>
+    <line x1="160" y1="200" x2="160" y2="240" stroke="#1976d2" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#arr2)"/>
+    <text x="170" y="225" font-size="10" fill="#1976d2">air down pipe</text>
+
+    <!-- Pipe bore label -->
+    <line x1="20" y1="240" x2="300" y2="240" stroke="#333" marker-start="url(#arr2)" marker-end="url(#arr2)"/>
+    <text x="160" y="256" text-anchor="middle" font-size="10">bore = mel_bore_ID = 0.500 in</text>
+  </g>
+
+  <!-- Tuning notes -->
+  <g transform="translate(80, 380)">
+    <rect x="0" y="0" width="640" height="100" fill="#fafafa" stroke="#999"/>
+    <text x="10" y="20" font-size="12" font-weight="bold">Reed tuning</text>
+    <text x="10" y="40" font-size="10">• Cut sharp by pull_down_cents (default −30 ¢) — tube pulls reed down to its resonance.</text>
+    <text x="10" y="56" font-size="10">• File tongue TIP to RAISE pitch.   File tongue ROOT to LOWER pitch.   Work in 0.005 in increments.</text>
+    <text x="10" y="72" font-size="10">• Cantilever model:  f_reed = K · t / L²   where K = 27,300 (brass), t = 0.008 in.</text>
+    <text x="10" y="88" font-size="10">• Slot clearance: 0.003 in / side.   Tighter = fouls.   Looser = leaks → flat.</text>
+  </g>
+</svg>

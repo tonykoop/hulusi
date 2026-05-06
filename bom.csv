@@ -1,0 +1,16 @@
+item_id,category,item,qty,spec,make_buy,estimated_cost,source_note,drawing_ref,notes
+HUL-BOM-001,Gourd,"Gourd wind chest, lathe-turned",1,"Walnut blank ~5 in OD x 8 in L (per gourd_belly_OD, gourd_height in Master_Inputs)",Make,$15-25,Local hardwood; sub dried Lagenaria gourd if traditional build,HUL-DRW-001,Workbook estimate not date-checked.
+HUL-BOM-002,Tube,Melody tube blank,1,"Pakkawood, 1 in OD x 18 in L (cuts to mel total length per Pipes!B15)",Buy,$10-15,Cousineau Wood Products / Bell Forest Products,HUL-DRW-002,Bore on ShopBot or lathe drill jig.
+HUL-BOM-003,Tube,Drone 1 tube blank,1,"Pakkawood, 1 in OD x 14 in L (cuts to dr1 total length per Pipes!C15)",Buy,$8-12,Cousineau / Bell Forest,HUL-DRW-002,Same bore + wall as melody.
+HUL-BOM-004,Tube,Drone 2 tube blank,1,"Pakkawood, 1 in OD x 10 in L (cuts to dr2 total length per Pipes!D15)",Buy,$6-10,Cousineau / Bell Forest,HUL-DRW-002,Plan for waxable foot plug after first acoustic test.
+HUL-BOM-005,Reed,Brass shim stock,1,"C26000 brass, 0.008 in x 6 in x 12 in sheet (per reed_thickness)",Buy,$15-25,McMaster 9534K27,HUL-DRW-003,Yields 30+ reed blanks per sheet.
+HUL-BOM-006,Reed mount,Reed frame plates,3,"Brass 0.040 in x 0.6 in x 1.0 in plate per pipe",Make,$5,Laser-cut from brass shim scrap or heavier shim,HUL-DRW-003,Slot dimensions per Pipes!B21.
+HUL-BOM-007,Sealant,"Beeswax (yellow, food-grade)",1,1 lb block,Buy,$8-12,Frontier Natural Products / local beekeeper,HUL-DRW-004,Mix with rosin for luthier's wax.
+HUL-BOM-008,Sealant,Pine rosin (for wax mix),1,8 oz,Buy,$6-10,Luthier supply (Stewart-MacDonald) or violin shop,,Mix 4:1 wax:rosin by mass for hulusi seal.
+HUL-BOM-009,Mouthpiece,Mouthpiece insert,1,"Boxwood or buffalo horn, 0.5 in OD x 1.5 in L",Make,$3-8,Lathe-turn from offcut or scrap horn,HUL-DRW-005,Bore matched to gourd_neck_OD.
+HUL-BOM-010,Decorative,Tassel + endcap,1,"Silk tassel, traditional Dai motif",Buy,$3-6,Etsy / specialty supplier,,Optional; for finished/gift-quality build.
+HUL-BOM-011,Hardware,Brass binding ring,1,"1.25 in ID brass ring (gourd-to-tubes joint reinforcement)",Buy,$4-8,McMaster 9499K201,HUL-DRW-001,Optional reinforcement at gourd belly.
+HUL-BOM-012,Tooling,Reed file set,1,Fine needle-file set 6 pcs,Buy,$15-25,Stewart-MacDonald,,One-time tooling cost.
+HUL-BOM-013,Measurement,Tuner / mic / DAW or hand tuner,1,Smartphone Cleartune or chromatic tuner,Have,$0-30,Existing,HUL-VAL-001,Required for validation loop.
+HUL-BOM-014,Consumable,CA glue + accelerator,1,Medium CA + spray accelerator,Buy,$8,Existing shop stock,,For brass-on-brass reed-to-frame mount.
+HUL-BOM-015,Consumable,Drill bit set (brad-point),1,1/64-1/2 in brad-point bit set,Have,$0,Existing shop stock,HUL-DRW-002,Hole_dia (default 0.275 in = 7 mm) requires letter-N or 7 mm bit.

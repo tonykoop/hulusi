@@ -1,0 +1,16 @@
+build_id,stage,date,model,key,pipe,condition,target_note,target_freq_hz,measured_freq_hz,cents_error,wax_added_g,tongue_filed_in,action,result,notes
+HUL-P0,reed-coupon,,coupon,F,Mel,free-reed,F4+pull_down,343.23,,,,,file tongue tip to raise pitch; root to lower,,Validate brass cut + slot fit before committing to full build.
+HUL-P1,single-pipe,,solo,F,Mel,all-closed,F4 (tonic),349.23,,,,,tune reed sharp by ~30 cents; let pipe pull down,,F-key prototype only.
+HUL-P1,single-pipe,,solo,F,Mel,hole-1,G4,392.00,,,,,measure with hole-1 open only,,
+HUL-P1,single-pipe,,solo,F,Mel,hole-7,F5,698.46,,,,,octave check,,
+HUL-P2,full-build,,F-key,F,Mel,all-closed,F4,349.23,,,,,wax tune at hole edges if cents_error > 25,,
+HUL-P2,full-build,,F-key,F,Mel,hole-1,G4,392.00,,,,,,,
+HUL-P2,full-build,,F-key,F,Mel,hole-2,A4,440.00,,,,,,,
+HUL-P2,full-build,,F-key,F,Mel,hole-3,A#4,466.16,,,,,,,
+HUL-P2,full-build,,F-key,F,Mel,hole-4,C5,523.25,,,,,,,
+HUL-P2,full-build,,F-key,F,Mel,hole-5,D5,587.33,,,,,,,
+HUL-P2,full-build,,F-key,F,Mel,hole-6,E5,659.26,,,,,,,
+HUL-P2,full-build,,F-key,F,Mel,hole-7+thumb,F5,698.46,,,,,,,
+HUL-P2,full-build,,F-key,F,Dr1,free,C5 (5th),523.25,,,,,fixed drone; voice via reed cut + wax,,
+HUL-P2,full-build,,F-key,F,Dr2,free-uncovered,F5 (oct),698.46,,,,,wax foot plug for muting,,
+HUL-P3,water-experiment,,F-key,F,Mel,all-closed,F4,349.23,,,,,,,Optional water-resonator experiment.

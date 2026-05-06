@@ -1,0 +1,60 @@
+{
+  "packet_dir": "C:\\Users\\Tony\\OneDrive\\Documents\\GitHub\\hulusi",
+  "title": "Hulusi (葫芦丝) — Wooden Cucurbit Free-Reed Flute Family (HUL-001) — Build Packet",
+  "scaffold_version": "v4.1",
+  "scaffold_changes_from_v4": [
+    "Master_Inputs sheet with 33 named globals (was: zero named ranges in udu)",
+    "Six derived sheets — Acoustics / Pipes / Holes / Family / BOM / Validation (was: single sheet in udu)",
+    "Family sheet is fully formula-driven (was: hand-typed static values in udu)",
+    "Data validation dropdowns on key, gourd species, tube wood, reed material",
+    "Cents-error formula auto-fills in Validation when measured Hz is entered",
+    "SolidWorks global-var parity file (cad/hulusi-design-table.txt) makes the Excel ↔ SW link self-documenting"
+  ],
+  "generated": "2026-05-05",
+  "files_included": [
+    "README.md",
+    "design.md",
+    "hulusi-design-table.xlsx",
+    "bom.csv",
+    "sourcing.csv",
+    "cut-list.csv",
+    "validation.csv",
+    "assembly-manual.md",
+    "drawing-brief.md",
+    "visual-bom-brief.md",
+    "supplier-rfq.md",
+    "wolfram-starter.wl",
+    "capstone-deck.md",
+    "print-packet.md",
+    "cad/hulusi_master.scad",
+    "cad/hulusi-design-table.txt",
+    "drawings/hulusi-section.svg",
+    "drawings/hulusi-family-scale.svg",
+    "drawings/reed-detail.svg"
+  ],
+  "design_table_stats": {
+    "sheets": 7,
+    "named_globals": 33,
+    "formulas": 113,
+    "formula_errors": 0
+  },
+  "family_keys": ["B♭", "C", "D", "F", "G"],
+  "prototype_ladder": [
+    "HUL-P0 reed coupon",
+    "HUL-P1 single melody pipe (F-key)",
+    "HUL-P2 full F-key hulusi",
+    "HUL-P3 waxable Drone 2",
+    "HUL-P4 family molds/jigs"
+  ],
+  "deferred": [
+    "Production CAD (.step / .stl / .dxf / .gcode) until HUL-P1 validates pipe physics",
+    "Reed pull-down eigenvalue fit until HUL-P0 measured data exists",
+    "PPTX capstone deck (markdown source ready)",
+    "PDF print packet (markdown source ready)"
+  ],
+  "notes": [
+    "All dimensions in the workbook and SCAD are imperial inches.",
+    "Reed K_imperial = 27,300 is computed from brass C26000 published moduli; verify on HUL-P0.",
+    "Modern Western 'all-closed = tonic' convention used; traditional Dai voicing reachable by adjusting key_midi to tonic_MIDI - 5."
+  ]
+}

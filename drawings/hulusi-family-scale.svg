@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Arial, sans-serif">
+  <title>Hulusi Family Scale</title>
+  <defs>
+    <pattern id="wood2" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#caa37a"/>
+      <line x1="0" y1="0" x2="6" y2="0" stroke="#a8825c" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+
+  <text x="450" y="28" text-anchor="middle" font-size="18" font-weight="bold">Hulusi Family — B♭ / C / D / F / G</text>
+  <text x="450" y="48" text-anchor="middle" font-size="11" fill="#555">All dimensions live from Family sheet — change one input → all five update</text>
+
+  <!-- Vertical reference line -->
+  <line x1="60" y1="380" x2="860" y2="380" stroke="#999"/>
+  <text x="450" y="475" text-anchor="middle" font-size="11" fill="#888">(scale: 1 in = 18 px)</text>
+
+  <!-- HUL-Bb : longest, 14.89 + gourd -->
+  <g transform="translate(110, 380)">
+    <ellipse cx="0" cy="-50" rx="36" ry="40" fill="url(#wood2)" stroke="#333"/>
+    <rect x="-12" y="-8" width="24" height="268" fill="url(#wood2)" stroke="#333"/>
+    <text x="0" y="-92" text-anchor="middle" font-size="13" font-weight="bold">HUL-B♭</text>
+    <text x="0" y="-78" text-anchor="middle" font-size="10">F3 (175 Hz)</text>
+    <text x="0" y="290" text-anchor="middle" font-size="10" fill="#555">mel 14.89 in</text>
+    <text x="0" y="304" text-anchor="middle" font-size="9" fill="#888">low / warm</text>
+  </g>
+
+  <!-- HUL-C -->
+  <g transform="translate(260, 380)">
+    <ellipse cx="0" cy="-50" rx="36" ry="40" fill="url(#wood2)" stroke="#333"/>
+    <rect x="-12" y="-8" width="24" height="240" fill="url(#wood2)" stroke="#333"/>
+    <text x="0" y="-92" text-anchor="middle" font-size="13" font-weight="bold">HUL-C</text>
+    <text x="0" y="-78" text-anchor="middle" font-size="10">G3 (196 Hz)</text>
+    <text x="0" y="262" text-anchor="middle" font-size="10" fill="#555">mel 13.30 in</text>
+    <text x="0" y="276" text-anchor="middle" font-size="9" fill="#888">vocal / mid</text>
+  </g>
+
+  <!-- HUL-D -->
+  <g transform="translate(410, 380)">
+    <ellipse cx="0" cy="-50" rx="36" ry="40" fill="url(#wood2)" stroke="#333"/>
+    <rect x="-12" y="-8" width="24" height="214" fill="url(#wood2)" stroke="#333"/>
+    <text x="0" y="-92" text-anchor="middle" font-size="13" font-weight="bold">HUL-D</text>
+    <text x="0" y="-78" text-anchor="middle" font-size="10">A3 (220 Hz)</text>
+    <text x="0" y="236" text-anchor="middle" font-size="10" fill="#555">mel 11.89 in</text>
+    <text x="0" y="250" text-anchor="middle" font-size="9" fill="#888">folk / dance</text>
+  </g>
+
+  <!-- HUL-F (highlighted) -->
+  <g transform="translate(560, 380)">
+    <ellipse cx="0" cy="-50" rx="36" ry="40" fill="#ffd966" stroke="#bf9000" stroke-width="2"/>
+    <rect x="-12" y="-8" width="24" height="181" fill="url(#wood2)" stroke="#bf9000" stroke-width="2"/>
+    <text x="0" y="-92" text-anchor="middle" font-size="13" font-weight="bold" fill="#bf9000">HUL-F ★</text>
+    <text x="0" y="-78" text-anchor="middle" font-size="10">C4 (262 Hz)</text>
+    <text x="0" y="203" text-anchor="middle" font-size="10" fill="#555">mel 10.05 in</text>
+    <text x="0" y="217" text-anchor="middle" font-size="9" fill="#bf9000" font-weight="bold">STANDARD</text>
+    <text x="0" y="231" text-anchor="middle" font-size="9" fill="#888">prototype 1</text>
+  </g>
+
+  <!-- HUL-G -->
+  <g transform="translate(710, 380)">
+    <ellipse cx="0" cy="-50" rx="36" ry="40" fill="url(#wood2)" stroke="#333"/>
+    <rect x="-12" y="-8" width="24" height="161" fill="url(#wood2)" stroke="#333"/>
+    <text x="0" y="-92" text-anchor="middle" font-size="13" font-weight="bold">HUL-G</text>
+    <text x="0" y="-78" text-anchor="middle" font-size="10">D4 (294 Hz)</text>
+    <text x="0" y="183" text-anchor="middle" font-size="10" fill="#555">mel 8.99 in</text>
+    <text x="0" y="197" text-anchor="middle" font-size="9" fill="#888">bright</text>
+  </g>
+
+</svg>
