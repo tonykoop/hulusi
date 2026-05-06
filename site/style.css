@@ -1,0 +1,246 @@
+/* Hulusi build-log site — single-stylesheet, no build step */
+
+:root {
+  --walnut: #5a3818;
+  --walnut-light: #8b5a2b;
+  --gold: #bf9000;
+  --pakka: #4d3320;
+  --brass: #d4a937;
+  --bg: #fff8ec;
+  --paper: #fafafa;
+  --text: #2a1810;
+  --muted: #555;
+  --rule: #d8cdb6;
+  --link: #7c4a18;
+  --link-hover: #bf9000;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+a:hover { border-bottom-color: var(--link-hover); color: var(--link-hover); }
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 5vw 3rem;
+  background: linear-gradient(135deg, var(--bg) 0%, #f0e5cd 100%);
+  border-bottom: 1px solid var(--rule);
+}
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding: 2rem 4vw; }
+}
+.hero-inner h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin: 0 0 0.5rem;
+  color: var(--walnut);
+  letter-spacing: -0.02em;
+}
+.hero-inner .tagline {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+  max-width: 32rem;
+}
+.hero-inner .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.hero-inner .links a {
+  display: inline-block;
+  margin-right: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.hero-inner .links a.primary {
+  background: var(--walnut);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+}
+.hero-inner .links a.primary:hover {
+  background: var(--gold);
+  color: white;
+}
+.hero-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-art object {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.hero-art .caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+/* Main sections */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 5vw;
+}
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+section:last-child { border-bottom: none; }
+section h2 {
+  font-size: 1.6rem;
+  color: var(--walnut);
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+/* Physics cards */
+.physics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.formula-card {
+  background: var(--paper);
+  padding: 1.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+.formula-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--walnut);
+}
+.formula-card code {
+  display: block;
+  background: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  font-family: "SF Mono", Consolas, monospace;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  border-left: 3px solid var(--gold);
+}
+.formula-card p { margin: 0.5rem 0 0; font-size: 0.88rem; color: var(--muted); }
+
+/* Family table */
+table.family {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--paper);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+table.family th, table.family td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+}
+table.family th {
+  background: var(--walnut);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+table.family tr.standard { background: #fff2cc; }
+table.family tr.standard td { font-weight: 500; }
+table.family tr:last-child td { border-bottom: none; }
+
+/* Drawings grid */
+.drawings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.drawing-card {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem;
+  display: block;
+  border-bottom: 1px solid var(--rule); /* override hover */
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.drawing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 56, 24, 0.1);
+  border-bottom: 1px solid var(--rule);
+  color: inherit;
+}
+.drawing-card object { width: 100%; height: 200px; pointer-events: none; }
+.drawing-card p { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
+
+/* Prototype ladder */
+ol.ladder { padding-left: 1.5rem; }
+ol.ladder li { margin-bottom: 0.5rem; }
+
+/* BOM */
+.bom-summary ul {
+  background: var(--paper);
+  padding: 1rem 1.25rem 1rem 2.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+.bom-summary li { margin-bottom: 0.25rem; }
+
+/* Risks */
+.risks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.risk-card {
+  background: var(--paper);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--gold);
+}
+.risk-card.sev-high { border-left-color: #c62828; }
+.risk-card.sev-med { border-left-color: #ef8c1c; }
+.risk-card h3 { margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--walnut); }
+.risk-card p { margin: 0; font-size: 0.85rem; color: var(--muted); }
+
+/* Code */
+code {
+  background: white;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-family: "SF Mono", Consolas, monospace;
+  font-size: 0.9em;
+  color: var(--walnut);
+  border: 1px solid var(--rule);
+}
+
+/* Footer */
+footer {
+  background: var(--walnut);
+  color: #f0e5cd;
+  padding: 2rem 5vw;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+footer a { color: #ffd966; border-bottom-color: transparent; }
+footer a:hover { color: white; }
+footer p { margin: 0 0 0.75rem; max-width: 60rem; }

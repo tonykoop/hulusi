@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 508" font-family="Arial, sans-serif">
+  <title>Hulusi G-key — Dimensioned Drawing (HUL-G)</title>
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#333"/>
+    </marker>
+    <pattern id="wd" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#caa37a"/>
+      <line x1="0" y1="0" x2="6" y2="0" stroke="#a8825c" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="br" patternUnits="userSpaceOnUse" width="3" height="3">
+      <rect width="3" height="3" fill="#d4a937"/>
+    </pattern>
+  </defs>
+
+  <!-- Title block -->
+  <rect x="10" y="10" width="780" height="55" fill="#fafafa" stroke="#333"/>
+  <text x="20" y="35" font-size="16" font-weight="bold" fill="#333">Hulusi G-key — HUL-G</text>
+  <text x="20" y="52" font-size="10" fill="#555">All-closed tonic: 392.00 Hz (MIDI 67) · scale: 1 in = 18 px · units: inches</text>
+  <text x="540" y="30" font-size="9" fill="#888">Drawing: HUL-DRW-G</text>
+  <text x="540" y="42" font-size="9" fill="#888">Source: hulusi-design-table.xlsx</text>
+  <text x="540" y="54" font-size="9" fill="#888">Date: 2026-05-05  ·  Build priority: 5  ·  Status: deferred</text>
+
+  <!-- Mouthpiece -->
+  <rect x="335" y="70" width="30" height="30" rx="2" fill="url(#wd)" stroke="#333"/>
+  <ellipse cx="350" cy="72" rx="9" ry="2" fill="#1a0a00"/>
+
+  <!-- Gourd outer profile -->
+  <path d="M 315 100
+           Q 307 123 310 158
+           Q 315 217 330 217
+           L 370 217
+           Q 385 217 390 158
+           Q 393 123 385 100 Z"
+        fill="url(#wd)" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Gourd label -->
+  <text x="350" y="158" text-anchor="middle" font-size="10" fill="#555" font-style="italic">gourd wind chest</text>
+  <text x="350" y="172" text-anchor="middle" font-size="9" fill="#888">4.5 × 6.5 in</text>
+
+  <!-- Three pipes -->
+  <!-- Drone 2 (left, octave) -->
+  <rect x="257" y="217" width="26" height="84" fill="url(#wd)" stroke="#333"/>
+  <rect x="263" y="217" width="14" height="84" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <rect x="266" y="225" width="8" height="2" fill="url(#br)" stroke="#333"/>
+  <text x="270" y="319" text-anchor="middle" font-size="10">Drone 2</text>
+  <text x="270" y="331" text-anchor="middle" font-size="9" fill="#555">octave +12 st</text>
+  <text x="270" y="343" text-anchor="middle" font-size="9" font-weight="bold">4.67 in</text>
+  <text x="270" y="355" text-anchor="middle" font-size="8" fill="#888">reed 0.532 in</text>
+
+  <!-- Melody (center, longest, finger holes) -->
+  <rect x="337" y="217" width="26" height="161" fill="url(#wd)" stroke="#333"/>
+  <rect x="343" y="217" width="14" height="161" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <rect x="346" y="225" width="8" height="2" fill="url(#br)" stroke="#333"/>
+  <circle cx="337" cy="242" r="2.5" fill="#1a0a00"/>
+  <text x="332" y="245" text-anchor="end" font-size="8" fill="#666">h1</text>
+  <circle cx="337" cy="257" r="2.5" fill="#1a0a00"/>
+  <text x="332" y="260" text-anchor="end" font-size="8" fill="#666">h2</text>
+  <circle cx="337" cy="264" r="2.5" fill="#1a0a00"/>
+  <text x="332" y="267" text-anchor="end" font-size="8" fill="#666">h3</text>
+  <circle cx="337" cy="276" r="2.5" fill="#1a0a00"/>
+  <text x="332" y="279" text-anchor="end" font-size="8" fill="#666">h4</text>
+  <circle cx="337" cy="287" r="2.5" fill="#1a0a00"/>
+  <text x="332" y="290" text-anchor="end" font-size="8" fill="#666">h5</text>
+  <circle cx="337" cy="297" r="2.5" fill="#1a0a00"/>
+  <text x="332" y="300" text-anchor="end" font-size="8" fill="#666">h6</text>
+  <circle cx="363" cy="302" r="2.5" fill="#1a0a00"/>
+  <text x="368" y="305" text-anchor="start" font-size="8" fill="#666">h7</text>
+  <text x="350" y="396" text-anchor="middle" font-size="10">Melody</text>
+  <text x="350" y="408" text-anchor="middle" font-size="9" fill="#555">7 holes · tonic +0 st</text>
+  <text x="350" y="420" text-anchor="middle" font-size="9" font-weight="bold">8.99 in</text>
+  <text x="350" y="432" text-anchor="middle" font-size="8" fill="#888">reed 0.753 in</text>
+
+  <!-- Drone 1 (right, 5th) -->
+  <rect x="417" y="217" width="26" height="110" fill="url(#wd)" stroke="#333"/>
+  <rect x="423" y="217" width="14" height="110" fill="#fff" stroke="#888" stroke-dasharray="2 2"/>
+  <rect x="426" y="225" width="8" height="2" fill="url(#br)" stroke="#333"/>
+  <text x="430" y="345" text-anchor="middle" font-size="10">Drone 1</text>
+  <text x="430" y="357" text-anchor="middle" font-size="9" fill="#555">5th +7 st</text>
+  <text x="430" y="369" text-anchor="middle" font-size="9" font-weight="bold">6.12 in</text>
+  <text x="430" y="381" text-anchor="middle" font-size="8" fill="#888">reed 0.616 in</text>
+
+  <!-- Dimension callout: melody pipe length -->
+  <line x1="640" y1="217" x2="640" y2="378" stroke="#333" marker-start="url(#ar)" marker-end="url(#ar)"/>
+  <text x="650" y="293" font-size="11" font-weight="bold">mel = 8.99 in</text>
+  <text x="650" y="307" font-size="9" fill="#888">family-spec.csv</text>
+
+  <!-- Datum line: foot of melody pipe -->
+  <line x1="320" y1="378" x2="380" y2="378" stroke="#c00" stroke-width="1.5"/>
+  <text x="384" y="382" font-size="9" fill="#c00">datum</text>
+
+  <!-- Bore dimension -->
+  <text x="540" y="247" font-size="10" fill="#555">All bores: 0.500 in ID</text>
+
+  <!-- Air-flow indicator -->
+  <line x1="350" y1="50" x2="350" y2="68" stroke="#1976d2" stroke-width="1.5" marker-end="url(#ar)" stroke-dasharray="4 2"/>
+  <text x="360" y="60" font-size="10" fill="#1976d2">air in</text>
+
+  <!-- Footer -->
+  <line x1="10" y1="478" x2="790" y2="478" stroke="#999"/>
+  <text x="20" y="493" font-size="9" fill="#888">All dimensions from hulusi-design-table.xlsx Master_Inputs (named globals: c_speed, A4_ref, key_midi, mel_bore_ID, dr1/dr2_target_offset, reed_K_imperial, reed_thickness, end_corr_k, pull_down_cents, correction_pct).</text>
+  <text x="20" y="505" font-size="9" fill="#888">v4 deliverable · per-family-member drawing · regenerate from family-spec.csv when Master_Inputs change.</text>
+</svg>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hulusi (葫芦丝) — Wooden Cucurbit Free-Reed Flute Family</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Hulusi (葫芦丝)</h1>
+    <p class="tagline">Wooden cucurbit free-reed flute family — B♭ / C / D / F / G — built on the v4.1 instrument-maker scaffold.</p>
+    <p class="meta">Status: design + drawings complete · physical builds forthcoming · last updated 2026-05-05</p>
+    <p class="links">
+      <a href="https://github.com/tonykoop/hulusi" class="primary">View on GitHub →</a>
+      <a href="../README.md">README</a>
+      <a href="../design.md">design.md</a>
+      <a href="../hulusi-design-table.xlsx">design table (.xlsx)</a>
+    </p>
+  </div>
+  <div class="hero-art">
+    <object data="../images/hero-concept.svg" type="image/svg+xml" aria-label="F-key hulusi concept render"></object>
+    <p class="caption">Concept render — replaced with photo of HUL-P2 (F-key) prototype after first build.</p>
+  </div>
+</header>
+
+<main>
+
+<section id="intro">
+  <h2>What this is</h2>
+  <p>Engineering documentation for a five-key family of wooden hulusi, the Chinese cucurbit free-reed flute. Each instrument is three independent stopped-pipe + free-reed systems sharing a hardwood gourd wind chest. The design is fully parametric: change one input in the workbook and every dimension across all five keys recomputes.</p>
+  <p>This page documents the design through the v4.1 scaffold — see the <a href="https://github.com/tonykoop/udu">udu</a> repo for the v4 reference and <a href="../v4-audit.md">v4-audit.md</a> for what changed.</p>
+</section>
+
+<section id="physics">
+  <h2>Governing physics</h2>
+  <div class="physics-grid">
+    <div class="formula-card">
+      <h3>Stopped pipe (each tube)</h3>
+      <code>f = c / (4 · L_eff)</code>
+      <p>L_eff = L_acoustic + 0.6·r_bore. Open at the foot, closed at the reed end. End correction at the open end only.</p>
+    </div>
+    <div class="formula-card">
+      <h3>Free reed (cantilever)</h3>
+      <code>f_reed = K · t / L_tongue²</code>
+      <p>Brass C26000: K ≈ 27,300 imperial. Reed cut sharp by <code>pull_down_cents</code> (default −30 ¢) so the tube pulls it down to its resonance.</p>
+    </div>
+    <div class="formula-card">
+      <h3>Finger holes (melody pipe)</h3>
+      <code>d_hole = L_acoustic · (f_fund / f_hole)</code>
+      <p>Each opened hole shortens the effective length. Default Western diatonic offsets {2, 4, 5, 7, 9, 11, 12} semitones from tonic.</p>
+    </div>
+  </div>
+</section>
+
+<section id="family">
+  <h2>Family</h2>
+  <p>Five keys driven by a single <code>key_midi</code> input. Every dimension below is a formula in the <code>Family</code> sheet — change one input, all rows update.</p>
+  <table class="family">
+    <thead>
+      <tr>
+        <th>Model</th><th>Key</th><th>Tonic</th>
+        <th>Mel L</th><th>Dr1 L</th><th>Dr2 L</th>
+        <th>Reed L mel</th><th>Drawing</th><th>Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>HUL-B♭</td><td>B♭</td><td>F3 (175 Hz)</td><td>14.89 in</td><td>10.05 in</td><td>7.62 in</td><td>0.977 in</td><td><a href="../drawings/hulusi-Bb.svg">SVG</a></td><td>Low / warm</td></tr>
+      <tr><td>HUL-C</td><td>C</td><td>G3 (196 Hz)</td><td>13.30 in</td><td>8.99 in</td><td>6.82 in</td><td>0.922 in</td><td><a href="../drawings/hulusi-C.svg">SVG</a></td><td>Vocal range</td></tr>
+      <tr><td>HUL-D</td><td>D</td><td>A3 (220 Hz)</td><td>11.89 in</td><td>8.05 in</td><td>6.12 in</td><td>0.871 in</td><td><a href="../drawings/hulusi-D.svg">SVG</a></td><td>Folk / dance</td></tr>
+      <tr class="standard"><td>HUL-F ★</td><td>F</td><td>C4 (262 Hz)</td><td>10.05 in</td><td>6.82 in</td><td>5.20 in</td><td>0.798 in</td><td><a href="../drawings/hulusi-F.svg">SVG</a></td><td><b>Standard — prototype 1</b></td></tr>
+      <tr><td>HUL-G</td><td>G</td><td>D4 (294 Hz)</td><td>8.99 in</td><td>6.12 in</td><td>4.67 in</td><td>0.753 in</td><td><a href="../drawings/hulusi-G.svg">SVG</a></td><td>Bright / festive</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="drawings">
+  <h2>Drawings</h2>
+  <div class="drawings-grid">
+    <a href="../drawings/hulusi-section.svg" class="drawing-card">
+      <object data="../drawings/hulusi-section.svg" type="image/svg+xml" aria-label="Centerline section"></object>
+      <p>Centerline section — gourd + 3 pipes + reed slot detail (F-key).</p>
+    </a>
+    <a href="../drawings/hulusi-family-scale.svg" class="drawing-card">
+      <object data="../drawings/hulusi-family-scale.svg" type="image/svg+xml" aria-label="Family scale comparison"></object>
+      <p>Family scale — all five keys side-by-side.</p>
+    </a>
+    <a href="../drawings/reed-detail.svg" class="drawing-card">
+      <object data="../drawings/reed-detail.svg" type="image/svg+xml" aria-label="Reed detail 4×"></object>
+      <p>Reed slot detail (4×) — tongue, frame plate, glue line, wax fillet.</p>
+    </a>
+  </div>
+</section>
+
+<section id="prototype-ladder">
+  <h2>Prototype ladder</h2>
+  <ol class="ladder">
+    <li><b>HUL-P0</b> reed coupon — validate brass-shim cutting + slot fit.</li>
+    <li><b>HUL-P1</b> single melody pipe (F-key) — validate stopped-pipe + finger-hole layout.</li>
+    <li><b>HUL-P2</b> full F-key hulusi — hit family target with gourd + 3 pipes.</li>
+    <li><b>HUL-P3</b> waxable Drone 2 — implement removable-wax drone control.</li>
+    <li><b>HUL-P4</b> family molds/jigs — scale to B♭ / C / D / G.</li>
+  </ol>
+</section>
+
+<section id="bom">
+  <h2>Bill of materials (one F-key build)</h2>
+  <p>Full BOM with supplier candidates and substitution rules: <a href="../bom.csv">bom.csv</a> · <a href="../sourcing.csv">sourcing.csv</a> · <a href="../supplier-rfq.md">supplier-rfq.md</a></p>
+  <div class="bom-summary">
+    <ul>
+      <li>Walnut gourd blank (~$20)</li>
+      <li>3 × pakkawood tube blanks (~$25)</li>
+      <li>Brass shim 0.008 in × 1 sheet (~$20)</li>
+      <li>Brass plate 0.040 in × 1 sheet (~$15)</li>
+      <li>Beeswax + pine rosin (~$15)</li>
+      <li>Boxwood mouthpiece blank (~$5)</li>
+      <li>Reed file set (one-time ~$20)</li>
+      <li><b>Total per build: ~$80–100</b> (excluding reusable tooling)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="risks">
+  <h2>Open risks</h2>
+  <p>Full red-team output: <a href="../risks.md">risks.md</a> — 18 tracked risks across 5 categories, each with a verification test.</p>
+  <div class="risks-grid">
+    <div class="risk-card sev-high">
+      <h3>A1 — Reed pull-down assumption</h3>
+      <p><b>Test:</b> HUL-P0 measured pull-down vs. predicted −30 ¢ default.</p>
+    </div>
+    <div class="risk-card sev-high">
+      <h3>S3 — Gourd glue-line failure</h3>
+      <p><b>Test:</b> Pressure-vacuum test at 30 / 60 / 90 days post-build.</p>
+    </div>
+    <div class="risk-card sev-med">
+      <h3>S1 — Pakkawood split during boring</h3>
+      <p><b>Test:</b> 3 consecutive bores complete with no splits.</p>
+    </div>
+    <div class="risk-card sev-med">
+      <h3>E1 — Hole positions vs hand size</h3>
+      <p><b>Test:</b> 3 players (large/avg/small hand) play scale without strain.</p>
+    </div>
+  </div>
+</section>
+
+<section id="next">
+  <h2>Next steps</h2>
+  <ol>
+    <li>Cut HUL-P0 reed coupons on the Epilog laser; validate brass cutting + reed-frame fit.</li>
+    <li>Sound 3 reeds off-pipe; fit <code>pull_down_cents</code> and <code>reed_K_imperial</code>.</li>
+    <li>Build HUL-P1 melody pipe (F-key); validate stopped-pipe model + 7 hole positions.</li>
+    <li>Build HUL-P2 full F-key hulusi; verify family target.</li>
+    <li>Photo replace the concept renders with shop photos per the <a href="../photo-shotlist.md">photo-shotlist</a>.</li>
+    <li>Scale to family per <a href="../family-spec.csv">family-spec.csv</a>.</li>
+  </ol>
+</section>
+
+<section id="cultural">
+  <h2>Cultural note</h2>
+  <p>The hulusi (葫芦丝, <i>húlúsī</i>, "gourd silk") belongs to the Dai people of Yunnan, with related cousin instruments across the Lahu, Wa, Achang, and De'ang peoples and across the border into northern Thailand and Laos. The traditional instrument uses a real dried bottle gourd and bamboo pipes. This project uses lathe-turned hardwood and pakkawood for build repeatability and bench durability — the lineage and naming remain credited.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>Released under the <a href="../LICENSE">MIT License</a>. The hulusi as an instrument concept and name belongs to the Dai people of Yunnan; the lineage attribution is part of the documentation, not a license claim.</p>
+  <p>Built with the <a href="https://github.com/tonykoop/instrument-maker">instrument-maker v4.1</a> skill. Sister repos: <a href="https://github.com/tonykoop/udu">udu</a> · <a href="https://github.com/tonykoop/gemshorn">gemshorn</a> · <a href="https://github.com/tonykoop/ocarina">ocarina</a> · <a href="https://github.com/tonykoop/transverse-flute">transverse-flute</a> · <a href="https://github.com/tonykoop/tongue-drum">tongue-drum</a></p>
+</footer>
+
+</body>
+</html>

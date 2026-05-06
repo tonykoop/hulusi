@@ -1,0 +1,6 @@
+model_id,key,key_midi,tonic_hz,mel_total_L_in,dr1_total_L_in,dr2_total_L_in,reed_L_mel_in,reed_L_dr1_in,reed_L_dr2_in,mel_bore_ID_in,gourd_belly_OD_in,gourd_height_in,reed_thickness_in,best_for,build_priority,prototype_stage
+HUL-Bb,B♭,58,233.08,14.89,10.05,7.62,0.977,0.798,0.691,0.500,4.50,6.50,0.008,low/warm voice,4,deferred
+HUL-C,C,60,261.63,13.30,8.99,6.82,0.922,0.753,0.652,0.500,4.50,6.50,0.008,vocal/intermediate,3,deferred
+HUL-D,D,62,293.66,11.89,8.05,6.12,0.871,0.711,0.616,0.500,4.50,6.50,0.008,folk/dance,2,deferred
+HUL-F,F,65,349.23,10.05,6.82,5.20,0.798,0.652,0.564,0.500,4.50,6.50,0.008,STANDARD,1,HUL-P2 active
+HUL-G,G,67,392.00,8.99,6.12,4.67,0.753,0.616,0.532,0.500,4.50,6.50,0.008,bright/festive,5,deferred
