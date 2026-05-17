@@ -1,0 +1,9 @@
+gate_id,prototype,gate,required_evidence,status,next_action
+VAL-001,HUL-P0,reed_source_registered,p0-reed-coupon-log.csv row created with source and material,open,Create P0 row with source_id and safe handling fields
+VAL-002,HUL-P0,safety_prechecks,safety-gates.csv entries SAFE-001 through SAFE-004,open,Pass SAFE-001..SAFE-004 before pressure interpretation
+VAL-003,HUL-P0,pull_down_capture,p0-reed-coupon-log.csv pull_down fields and method,open,Capture pull-down and onset for at least one trial
+VAL-004,HUL-P1,traceability,link p1 row to p0_coupon_id and windchest chamber plan,open,Carry P0 identifier into P1 rows before P1 interpretation
+VAL-005,HUL-P1,chamber_plan,windchest-geometry-plan.csv has linked chamber_id and leak test design,open,Finalize chamber geometry and leak test method before coupled pitch claims
+VAL-006,HUL-P1,leak_separation,p1 row records chamber_leak_method and leak_status,open,Separate leak from reed response before pitch updates
+VAL-007,HUL-P1,safety_signoff,SAFE-005 and SAFE-006 pass in P1 conditions,open,Resolve blockers before any HUL-P1 status change
+VAL-008,HUL-P1,protocol_compliance,free-reed-empirical-loop.md followed and references completed,open,Use this protocol before any HUL-P2 work
