@@ -72,6 +72,19 @@ The first prototype is the **F-key** standard (modern factory voicing, all-holes
 | **HUL-P3** waxable Drone 2 | Implement removable-wax drone control | Player can mute/unmute mid-phrase |
 | **HUL-P4** family molds/jigs | Scale to B♭ / C / D / G | Predictable pitch trend; reed-cut jig usable for all 5 keys |
 
+## Round 23 B0 Empirical Loop Pack
+
+This Round 23 lane adds the HUL-P0/HUL-P1 evidence surface without promoting fabrication authority:
+
+- [free-reed-empirical-loop.md](free-reed-empirical-loop.md): P0 reed coupon + P1 single melody pipe protocol.
+- [p0-reed-coupon-log.csv](p0-reed-coupon-log.csv): Source, pull-down, and onset capture intake for reed-only trials.
+- [p1-single-melody-pipe-control-log.csv](p1-single-melody-pipe-control-log.csv): Traced P0-to-P1 control row with pressure, leak, and coupled response fields.
+- [windchest-geometry-plan.csv](windchest-geometry-plan.csv): Windchest planning and leak-test authority plan before full-layout claims.
+- [safety-gates.csv](safety-gates.csv): Stop conditions that block unsafe pressure testing or premature coupled claims.
+- [validation-loop.csv](validation-loop.csv): Gate tracking for the empirical loop from planning to measured interpretation.
+
+No DXF/CAD production file or geometry in this lane is accepted as fabrication-ready authority.
+
 ## Hardware alignment — ShopBot + lathe + Epilog laser
 
 The build chain is fully tooled at Maker Nexus + home shop:
@@ -152,7 +165,7 @@ hulusi/
 | HUL-P1 single melody pipe (F-key) | forthcoming |
 | HUL-P2 full F-key hulusi prototype | forthcoming |
 | Production CAD (.step / .stl / .dxf) | **deferred** — generated after HUL-P1 validates pipe physics |
-| Reed pull-down empirical fit (eigenvalue model) | **deferred** — needs HUL-P0 measured data |
+| Reed pull-down empirical fit (eigenvalue model) | **deferred** — HUL-P0/HUL-P1 loop evidence is now staged in `validation-loop.csv` |
 
 Tier 3 production files (.step, validated .stl, .dxf, .gcode) are out of scope until **HUL-P1 validates the stopped-pipe model + finger-hole layout** and **HUL-P0 validates the reed-cut process**. See [`design.md`](design.md) "Open Assumptions" and [`risks.md`](risks.md) for the deferral reasoning.
 

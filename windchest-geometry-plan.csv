@@ -1,0 +1,2 @@
+chamber_id,prototype_id,phase,linked_coupon_or_control,geometry_status,chamber_volume_ml,pressure_path,inlet_diameter_mm,pressure_tap_location,gasket_land_width_mm,compression_stop,reed_service_direction,leak_test_method,leak_rate_limit,measured_leak_rate,safe_pressure_limit_pa,authority,next_action,notes
+HUL-WC-P1-F,HUL-F,P1,HUL-P1-F-001,unknown_requires_measurement,NA,mouthpiece_to_shared_chamber_to_reed_slot,NA,NA,NA,NA,TBD,TBD,low-pressure-hold,TBD,NA,planning_only,TBD,derive geometry plan after P0 safety checks and single-pipe results

@@ -50,6 +50,17 @@ Brass C26000 → `K_imperial ≈ 27,300` (with `t` in inches, `L` in inches, out
 
 This separation matches the udu repo's spirit (parametric inputs + empirical correction column) but adds the named-global pattern Tony's design conventions call for.
 
+### HUL-P0 / HUL-P1 empirical loop (Round 23 B0)
+
+Before any full hulusi body progress, this packet requires an explicit two-step loop:
+
+1. Run one HUL-P0 reed coupon in `p0-reed-coupon-log.csv` and capture pull-down, onset, and safe handling checks in one row.
+2. Carry the traced `coupon_id` into `p1-single-melody-pipe-control-log.csv` and capture coupled pitch, leak status, and pressure behavior for one controlled melody-pipe trial.
+3. Record windchest assumptions in `windchest-geometry-plan.csv` before moving to chamber claims.
+4. Gate every next step through `validation-loop.csv` and `safety-gates.csv` before any branch promotion.
+
+`free-reed-empirical-loop.md` is the procedural source of truth for step sequencing and stop conditions.
+
 ## Current Workbook Inputs (defaults)
 
 | Group | Field | Value | Notes |
