@@ -1,6 +1,12 @@
 {
-  "packet_dir": "C:\\Users\\Tony\\OneDrive\\Documents\\GitHub\\hulusi",
+  "packet_dir": ".",
   "title": "Hulusi (葫芦丝) — Wooden Cucurbit Free-Reed Flute Family (HUL-001) — Build Packet",
+  "instrument": "Hulusi (葫芦丝)",
+  "build_target": "HUL-001 five-key wooden hulusi family",
+  "artifact_focus": "F-key prototype ladder with B♭ / C / D / F / G family scaling",
+  "release_status": "private review scaffold",
+  "packet_version": "v4.1 root scaffold + v4.4.8 studio explorer",
+  "hero_image": "images/hero-concept.svg",
   "scaffold_version": "v4.1",
   "scaffold_changes_from_v4": [
     "Master_Inputs sheet with 33 named globals (was: zero named ranges in udu)",
@@ -25,12 +31,17 @@
     "supplier-rfq.md",
     "wolfram-starter.wl",
     "capstone-deck.md",
+    "capstone-deck.pptx",
     "print-packet.md",
+    "print-packet.pdf",
+    "print-packet.html",
     "cad/hulusi_master.scad",
     "cad/hulusi-design-table.txt",
     "drawings/hulusi-section.svg",
     "drawings/hulusi-family-scale.svg",
-    "drawings/reed-detail.svg"
+    "drawings/reed-detail.svg",
+    "site/index.html",
+    "explorer.html"
   ],
   "design_table_stats": {
     "sheets": 7,
@@ -39,6 +50,13 @@
     "formula_errors": 0
   },
   "family_keys": ["B♭", "C", "D", "F", "G"],
+  "family_members": [
+    "HUL-B♭",
+    "HUL-C",
+    "HUL-D",
+    "HUL-F",
+    "HUL-G"
+  ],
   "prototype_ladder": [
     "HUL-P0 reed coupon",
     "HUL-P1 single melody pipe (F-key)",
@@ -48,9 +66,37 @@
   ],
   "deferred": [
     "Production CAD (.step / .stl / .dxf / .gcode) until HUL-P1 validates pipe physics",
-    "Reed pull-down eigenvalue fit until HUL-P0 measured data exists",
-    "PPTX capstone deck (markdown source ready)",
-    "PDF print packet (markdown source ready)"
+    "Reed pull-down eigenvalue fit until HUL-P0 measured data exists"
+  ],
+  "release_gate": {
+    "public_candidate": false,
+    "required_before_public": [
+      "HUL-P0 reed-coupon measurements are still required before claiming reed pull-down calibration.",
+      "HUL-P1 melody-pipe measurements are still required before treating the pipe and finger-hole model as validated.",
+      "Production CAD, DXF, STEP, STL, and G-code remain deferred until measured prototype data supports them.",
+      "Concept images should be replaced with shop photos before public-release presentation."
+    ]
+  },
+  "engineering": {
+    "wolfram": [
+      {
+        "source_file": "wolfram-starter.wl",
+        "cloud_path": "wolfram-starter.wl",
+        "cloud_url": "",
+        "kind": "local-wl",
+        "permission": "local-only pending cloud publish"
+      }
+    ]
+  },
+  "cultural_provenance": {
+    "claim": "The hulusi lineage is credited to the Dai people of Yunnan, with related instruments across nearby communities and regions; this repo documents a modern wooden workshop interpretation rather than a traditional artifact claim."
+  },
+  "sources": [
+    "README.md",
+    "design.md",
+    "validation.csv",
+    "risks.md",
+    "site/index.html"
   ],
   "notes": [
     "All dimensions in the workbook and SCAD are imperial inches.",

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hulusi Print Packet</title>
+<style>
+:root{--ink:#1f1a14;--muted:#685b4d;--rule:#dacdbb;--paper:#fffaf0;--accent:#1e3a8a}
+*{box-sizing:border-box}
+body{margin:0;background:#f8f4e9;color:var(--ink);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 22px 56px}
+h1,h2{font-family:Georgia,serif;color:#3d2817}
+h1{font-size:34px;margin:0 0 8px}
+h2{font-size:22px;margin:28px 0 10px;border-top:1px solid var(--rule);padding-top:18px}
+a{color:var(--accent)}
+.lede{color:var(--muted);max-width:760px}
+.notice{border-left:4px solid #a03a2a;background:#fff;padding:12px 14px;margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0}
+.card{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:14px}
+.card b{display:block;margin-bottom:4px;color:#3d2817}
+table{width:100%;border-collapse:collapse;background:#fff;margin:10px 0 18px}
+th,td{border:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#efe7d3}
+code{background:#f2ebda;padding:1px 5px;border-radius:3px}
+@media print{body{background:#fff}main{padding:0}.notice,.card,table{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Hulusi Print Packet</h1>
+  <p class="lede">Shop-floor bridge for the existing <a href="print-packet.pdf">PDF</a> and <a href="print-packet.md">Markdown packet</a>. Use this page to orient quickly before cutting, voicing, or recording validation data.</p>
+  <div class="notice"><b>Readiness boundary:</b> this packet is ready for HUL-P0/HUL-P1 bench trials, but it is not measured build evidence. Reed pull-down, pipe correction, ergonomic hole shifts, and production CAD exports still require prototype data.</div>
+
+  <div class="grid">
+    <div class="card"><b>Design authority</b><a href="hulusi-design-table.xlsx">hulusi-design-table.xlsx</a><br><span>Named inputs and formula-derived family dimensions.</span></div>
+    <div class="card"><b>Build sequence</b><a href="assembly-manual.md">assembly-manual.md</a><br><span>Fourteen-step shop procedure and failure checks.</span></div>
+    <div class="card"><b>Validation log</b><a href="validation.csv">validation.csv</a><br><span>Target rows are scaffolded; measured fields remain blank until tests exist.</span></div>
+    <div class="card"><b>Explorer</b><a href="explorer.html">explorer.html</a><br><span>Studio navigation surface for the full repo packet.</span></div>
+  </div>
+
+  <h2>Master Inputs Before Cutting</h2>
+  <table>
+    <thead><tr><th>Variable</th><th>Default</th><th>Bench value</th></tr></thead>
+    <tbody>
+      <tr><td><code>key_midi</code></td><td>65 (F4)</td><td>_____</td></tr>
+      <tr><td><code>mel_bore_ID</code></td><td>0.500 in</td><td>_____</td></tr>
+      <tr><td><code>mel_hole_dia</code></td><td>0.275 in</td><td>_____</td></tr>
+      <tr><td><code>reed_thickness</code></td><td>0.008 in</td><td>_____</td></tr>
+      <tr><td><code>pull_down_cents</code></td><td>-30 cents</td><td>_____</td></tr>
+      <tr><td><code>correction_pct</code></td><td>0%</td><td>_____</td></tr>
+    </tbody>
+  </table>
+
+  <h2>F-Key Default Cut Targets</h2>
+  <table>
+    <thead><tr><th>Part</th><th>Length / size</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Melody tube</td><td>10.05 in, 0.500 in bore</td><td>Includes reed-pad allowance.</td></tr>
+      <tr><td>Drone 1</td><td>6.82 in, 0.500 in bore</td><td>Fifth drone.</td></tr>
+      <tr><td>Drone 2</td><td>5.20 in, 0.500 in bore</td><td>Leave foot for wax plug.</td></tr>
+      <tr><td>Melody reed tongue</td><td>0.798 in x 0.157 in x 0.008 in</td><td>Brass C26000 starting target.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Bench Loop</h2>
+  <ol>
+    <li>Confirm workbook inputs and re-export any derived shop sheets that changed.</li>
+    <li>Cut HUL-P0 reed coupons and record off-pipe pitch before committing to full pipes.</li>
+    <li>Build HUL-P1 melody pipe and compare all seven notes against <a href="validation.csv">validation.csv</a>.</li>
+    <li>Update <code>pull_down_cents</code> and <code>correction_pct</code> only from measured prototype evidence.</li>
+  </ol>
+</main>
+</body>
+</html>
