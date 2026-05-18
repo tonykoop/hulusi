@@ -362,7 +362,7 @@ mark.hit{background:var(--gold);color:var(--ink);
     <input id="search" class="search" placeholder="Search packet content…" aria-label="Search packet content">
     <a class="action-btn" href="print-packet.html" target="_blank" rel="noopener">Print packet</a>
     <a class="action-btn" href="site/index.html" target="_blank" rel="noopener">Site</a>
-    <a class="action-btn" href="https://github.com/tonykoop/explorer-r2-hulusi" target="_blank" rel="noopener">GitHub</a>
+    <a class="action-btn" href="https://github.com/tonykoop/hulusi" target="_blank" rel="noopener">GitHub</a>
   </div>
 </header>
 
@@ -654,7 +654,7 @@ async function initFiles(){
     const fn = el.dataset.csv;
     const text = await fetchText(fn);
     if (text === null){
-      el.innerHTML = '<p class="muted">Source not loadable in this context (likely local-file CORS). <a href="' + fn + '" target="_blank" rel="noopener">Open raw →</a></p>';
+      el.innerHTML = '<p class="muted">Source not loadable in this context (likely direct-file browser restrictions). <a href="' + fn + '" target="_blank" rel="noopener">Open raw</a></p>';
       continue;
     }
     el.innerHTML = ''; renderCSV(el, text);
@@ -664,7 +664,7 @@ async function initFiles(){
     const fn = el.dataset.md;
     const text = await fetchText(fn);
     if (text === null){
-      el.innerHTML = '<p class="muted">Source not loadable in this context (likely local-file CORS). <a href="' + fn + '" target="_blank" rel="noopener">Open raw →</a></p>';
+      el.innerHTML = '<p class="muted">Source not loadable in this context (likely direct-file browser restrictions). <a href="' + fn + '" target="_blank" rel="noopener">Open raw</a></p>';
       continue;
     }
     const wrap = document.createElement('div'); wrap.className = 'md';
@@ -887,7 +887,7 @@ function initCAD(){
   });
   mv.addEventListener('error', () => {
     head.querySelector('.note').innerHTML =
-      'CAD model could not be loaded — the most likely cause is opening from a local file URL. Serve the repo with a local web server, or check that the referenced <code>.glb/.gltf</code> asset exists.';
+      'CAD model could not be loaded. Serve the repo with a local web server, or check that the referenced <code>.glb/.gltf</code> asset exists.';
   });
 }
 
