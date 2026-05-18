@@ -85,6 +85,13 @@ This Round 23 lane adds the HUL-P0/HUL-P1 evidence surface without promoting fab
 
 No DXF/CAD production file or geometry in this lane is accepted as fabrication-ready authority.
 
+Round 30 refresh: the empirical-loop files are intentionally held at
+`L1_packet -> measurement_required`. The P0/P1 CSV rows are logging templates,
+not measurement results; `family-spec.csv` keeps
+`acoustic_law=unknown_requires_measurement` until one reed coupon and one
+single-pipe control provide measured pull-down, onset, blow/draw, leak, and
+coupled-pitch evidence.
+
 ## Hardware alignment — ShopBot + lathe + Epilog laser
 
 The build chain is fully tooled at Maker Nexus + home shop:

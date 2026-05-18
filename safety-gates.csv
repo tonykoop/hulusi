@@ -2,7 +2,7 @@ gate_id,phase,hazard,required_check,pass_fail,status,stop_condition,next_action
 SAFE-001,P0,sharp_reed_edges,reed tongue and frame edges deburred before handling,NA,open,burr or cutting edge remains,debur and re-check before P0 handling
 SAFE-002,P0,loose_reed_plate,fixture held without hand pressure,NA,open,reed shifts/lifts/ejects,block P0 interpretation and stop until fixture is reworked
 SAFE-003,P0,overpressure,onset pressure remains below logged safe limit during sweep,NA,open,onset pressure exceeds safe limit,stop P0 and revise gap/source before P1
-SAFE-004,P0,uncontrolled_air_source,regulated source used for first P0 checks,NA,open,manual bulb or unmetered pump not used,complete low-pressure source setup first
+SAFE-004,P0,uncontrolled_air_source,regulated source used for first P0 checks,NA,open,manual bulb or unmetered pump used,complete low-pressure source setup first
 SAFE-005,P1,chamber_leak_confusion,leak source separated from reed response during coupled tests,NA,open,chamber leak source cannot be isolated,fix leak path and re-run chamber plan
 SAFE-006,P1,service_access_failure,reed and chamber can be serviced without gasket damage,NA,open,reed service inaccessible or gasket damaged,revise chamber geometry
 SAFE-007,P1,authority_overclaim,"No image/DXF/PDF is treated as cut-ready before loop completion",NA,open,visual or sketch treated as dimensional authority,add concept_only label and keep this lane as planning

@@ -4,8 +4,8 @@
   "instrument": "Hulusi (葫芦丝)",
   "build_target": "HUL-001 five-key wooden hulusi family",
   "artifact_focus": "F-key prototype ladder with B♭ / C / D / F / G family scaling",
-  "release_status": "private review scaffold",
-  "packet_version": "v4.1 root scaffold + v4.4.8 studio explorer",
+  "release_status": "private review scaffold; L1_packet -> measurement_required",
+  "packet_version": "v4.1 root scaffold + v4.4.8 studio explorer + Round 30 empirical-loop refresh",
   "hero_image": "images/hero-concept.svg",
   "scaffold_version": "v4.1",
   "scaffold_changes_from_v4": [
@@ -25,6 +25,13 @@
     "sourcing.csv",
     "cut-list.csv",
     "validation.csv",
+    "validation-loop.csv",
+    "free-reed-empirical-loop.md",
+    "p0-reed-coupon-log.csv",
+    "p1-single-melody-pipe-control-log.csv",
+    "windchest-geometry-plan.csv",
+    "safety-gates.csv",
+    "family-spec.csv",
     "assembly-manual.md",
     "drawing-brief.md",
     "visual-bom-brief.md",
@@ -68,6 +75,27 @@
     "Production CAD (.step / .stl / .dxf / .gcode) until HUL-P1 validates pipe physics",
     "Reed pull-down eigenvalue fit until HUL-P0 measured data exists"
   ],
+  "empirical_loop": {
+    "readiness": "L1_packet -> measurement_required",
+    "scope": "HUL-P0 reed coupon and HUL-P1 single-melody-pipe control scaffolds only",
+    "measurement_status": {
+      "reed_alone_pitch_hz": "not_measured",
+      "pull_down_cents": "not_measured",
+      "onset_pressure_pa": "not_measured",
+      "blow_draw_behavior": "not_measured",
+      "coupled_pitch_hz": "not_measured",
+      "leak_status": "unknown"
+    },
+    "primary_files": [
+      "free-reed-empirical-loop.md",
+      "p0-reed-coupon-log.csv",
+      "p1-single-melody-pipe-control-log.csv",
+      "validation-loop.csv",
+      "windchest-geometry-plan.csv",
+      "safety-gates.csv",
+      "family-spec.csv"
+    ]
+  },
   "release_gate": {
     "public_candidate": false,
     "required_before_public": [
