@@ -1,5 +1,10 @@
 # Hulusi (葫芦丝) — Wooden Cucurbit Free-Reed Flute Family
 
+Status: L2 V5 build-packet candidate. The repo is organized for prototype
+review and shop planning, but HUL-P0/HUL-P1 measurements, production CAD/DXF,
+reed pull-down calibration, and physical validation remain pending before any
+L3/build-ready claim.
+
 > *Engineering documentation for a 5-key family (B♭ / C / D / F / G) of wooden hulusi, built on the v4.1 instrument-maker scaffold. Stopped-pipe + free-reed acoustic model, parametric workbook with 33 named globals, SolidWorks design-table parity, dimensioned per-family-member drawings, prototype ladder, and recruiter-facing build-log site.*
 
 ![Hero — F-key hulusi concept (placeholder until first prototype is photographed)](images/hero-concept.svg)
@@ -118,6 +123,8 @@ hulusi/
 ├── sourcing.csv                    ← supplier/search tracker
 ├── cut-list.csv                    ← rough/finished dimensions, tolerances, family scaling
 ├── validation.csv                  ← target/measured tuning + cents-error log
+├── visual-output-register.csv      ← V5 authority map for CAD/visual/model artifacts
+├── cad/mcp-session-log.md          ← V5 provenance stub; no MCP/tool artifact session yet
 ├── supplier-rfq.md                 ← RFQ template
 │
 ├── assembly-manual.md              ← shop-floor build sequence (14 steps)
