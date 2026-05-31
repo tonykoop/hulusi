@@ -15,7 +15,7 @@ L3/build-ready claim.
 Engineering documentation for a five-key family of wooden hulusi, the Chinese cucurbit free-reed flute. The repo ships:
 
 1. **A parametric design table** ([`hulusi-design-table.xlsx`](hulusi-design-table.xlsx)) — `Master_Inputs` sheet with 33 named global variables driving six derived sheets (`Acoustics`, `Pipes`, `Holes`, `Family`, `BOM`, `Validation`). Every input is blue (#0000FF font + #D6E4F0 fill); every other cell is a formula. The named-globals scheme matches the SolidWorks global-variable list in [`cad/hulusi-design-table.txt`](cad/hulusi-design-table.txt) **exactly** so the SW design-table link is bidirectional.
-2. **A complete v4 build packet** — [`design.md`](design.md), [`bom.csv`](bom.csv), [`sourcing.csv`](sourcing.csv), [`cut-list.csv`](cut-list.csv), [`validation.csv`](validation.csv), [`assembly-manual.md`](assembly-manual.md), [`supplier-rfq.md`](supplier-rfq.md), [`drawing-brief.md`](drawing-brief.md), [`visual-bom-brief.md`](visual-bom-brief.md), [`wolfram-starter.wl`](wolfram-starter.wl), [`risks.md`](risks.md), [`photo-shotlist.md`](photo-shotlist.md), [`family-spec.csv`](family-spec.csv).
+2. **A complete v4 build packet** — [`design.md`](design.md), [`bom.csv`](bom.csv), [`sourcing.csv`](sourcing.csv), [`cut-list.csv`](cut-list.csv), [`validation.csv`](validation.csv), [`assembly-manual.md`](assembly-manual.md), [`supplier-rfq.md`](supplier-rfq.md), [`drawing-brief.md`](drawing-brief.md), [`visual-bom-brief.md`](visual-bom-brief.md), [`hulusi-starter.wl`](hulusi-starter.wl), [`risks.md`](risks.md), [`photo-shotlist.md`](photo-shotlist.md), [`family-spec.csv`](family-spec.csv).
 3. **Per-family-member dimensioned drawings** — `drawings/hulusi-Bb.svg`, `hulusi-C.svg`, `hulusi-D.svg`, `hulusi-F.svg`, `hulusi-G.svg`, plus the centerline section, family-scale comparison, and the 4× reed-slot detail.
 4. **Recruiter-facing artifacts** — auto-generated [`capstone-deck.pptx`](capstone-deck.pptx), printable [`print-packet.pdf`](print-packet.pdf), and a self-contained build-log static site under [`site/`](site/index.html).
 5. **Studio explorer** — [`explorer.html`](explorer.html) collects the packet, design files, validation scaffold, Wolfram starter, CAD/OpenSCAD notes, print packet, and build-log site into a single review surface.
@@ -51,7 +51,7 @@ f_reed = K · t / L_tongue²      (cantilever; brass K ≈ 27,300 imperial)
 
 Each reed is **cut sharp** by `pull_down_cents` (default −30 ¢). The pipe then pulls the reed down to its own resonance — classic free-reed pull-down. The empirical correction loop in `Master_Inputs` and `validation.csv` captures the actual pull-down per build, so the next instrument's reeds can be cut closer to target.
 
-See [`design.md`](design.md) and [`wolfram-starter.wl`](wolfram-starter.wl) for the full physics treatment, including a 2-mode coupling-matrix placeholder ready to fit against measured HUL-P0 data.
+See [`design.md`](design.md) and [`hulusi-starter.wl`](hulusi-starter.wl) for the full physics treatment, including a 2-mode coupling-matrix placeholder ready to fit against measured HUL-P0 data.
 
 ## Family targets
 
@@ -132,7 +132,7 @@ hulusi/
 ├── visual-bom-brief.md             ← visual-BOM art-direction brief
 ├── photo-shotlist.md               ← photography plan for build-log site
 ├── risks.md                        ← red-team output, 5 risk categories × verification tests
-├── wolfram-starter.wl              ← stopped-pipe + free-reed Wolfram notebook
+├── hulusi-starter.wl              ← stopped-pipe + free-reed Wolfram notebook
 │
 ├── capstone-deck.{md,pptx}         ← recruiter-facing slide deck
 ├── print-packet.{md,pdf}           ← combined shop-print packet
