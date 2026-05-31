@@ -25,7 +25,7 @@
 | 11 | `drawing-brief.md` | ✓ done | required views + dim table. |
 | 12 | `visual-bom-brief.md` | ✓ done | layout brief. |
 | 13 | `supplier-rfq.md` | ✓ done | RFQ template. |
-| 14 | `wolfram-starter.wl` | ✓ done | physics sanity-check notebook. |
+| 14 | `hulusi-starter.wl` | ✓ done | physics sanity-check notebook. |
 | 15 | `capstone-manifest.json` | ✓ done | orientation manifest. |
 
 ### v4-specific additions (the gaps the user flagged)

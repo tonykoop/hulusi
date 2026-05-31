@@ -35,7 +35,7 @@
 - `drawing-brief.md`: required views + critical dimensions table.
 - `visual-bom-brief.md`: one-page exploded BOM art direction.
 - `supplier-rfq.md`: copy-paste RFQ template.
-- `wolfram-starter.wl`: physics sanity-check notebook.
+- `hulusi-starter.wl`: physics sanity-check notebook.
 - `cad/hulusi_master.scad`: parametric OpenSCAD starter, family-aware.
 - `cad/hulusi-design-table.txt`: SW global-var parity reference.
 - `drawings/hulusi-section.svg`, `hulusi-family-scale.svg`, `reed-detail.svg`: dimensioned drawings.

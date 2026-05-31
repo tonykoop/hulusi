@@ -36,7 +36,7 @@
     "drawing-brief.md",
     "visual-bom-brief.md",
     "supplier-rfq.md",
-    "wolfram-starter.wl",
+    "hulusi-starter.wl",
     "capstone-deck.md",
     "capstone-deck.pptx",
     "print-packet.md",
@@ -108,8 +108,8 @@
   "engineering": {
     "wolfram": [
       {
-        "source_file": "wolfram-starter.wl",
-        "cloud_path": "wolfram-starter.wl",
+        "source_file": "hulusi-starter.wl",
+        "cloud_path": "hulusi-starter.wl",
         "cloud_url": "",
         "kind": "local-wl",
         "permission": "local-only pending cloud publish"
