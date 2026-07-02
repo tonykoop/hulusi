@@ -1,9 +1,13 @@
 # Hulusi (葫芦丝) — Wooden Cucurbit Free-Reed Flute Family
 
-Status: L2 V5 build-packet candidate. The repo is organized for prototype
-review and shop planning, but HUL-P0/HUL-P1 measurements, production CAD/DXF,
-reed pull-down calibration, and physical validation remain pending before any
-L3/build-ready claim.
+**Status:** L1 concept packet. The repo is organized for prototype review and
+shop planning, but per the hulusi/bawu stopped-pipe free-reed validation
+guidance, every acoustic-law row (`family-spec.csv`, `p0-reed-coupon-log.csv`,
+`p1-single-melody-pipe-control-log.csv`) is still `unknown_requires_measurement`
+/ `measurement_required` — no HUL-P0 reed coupon or HUL-P1 single-pipe control
+has produced measured data yet, so this stays L1 rather than L2 until that
+bench evidence exists. Production CAD/DXF, reed pull-down calibration, and
+physical validation remain pending before any L2/L3 promotion.
 
 > *Engineering documentation for a 5-key family (B♭ / C / D / F / G) of wooden hulusi, built on the v4.1 instrument-maker scaffold. Stopped-pipe + free-reed acoustic model, parametric workbook with 33 named globals, SolidWorks design-table parity, dimensioned per-family-member drawings, prototype ladder, and recruiter-facing build-log site.*
 
@@ -143,6 +147,8 @@ hulusi/
 │   ├── hulusi_master.scad          ← parametric OpenSCAD starter (family-aware)
 │   └── hulusi-design-table.txt     ← SolidWorks global-var parity reference
 ├── cnc/                            ← reed-tongue.dxf + reed-frame.dxf land here once exported
+├── wolfram/hulusi-wolfram-model.wl ← generated Wolfram source package (source-only, not executed)
+├── evolution/                      ← evolution-pipeline Stage 0 intake: master manifest, design-intent, revision register (Gate A not yet run)
 ├── drawings/
 │   ├── hulusi-section.svg          ← centerline section
 │   ├── hulusi-family-scale.svg     ← 5-key silhouettes

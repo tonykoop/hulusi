@@ -1,0 +1,34 @@
+{
+  "product": "hulusi",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "pre-commit intake, 2026-07-01",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/hulusi_master.scad",
+      "format": "openscad-source",
+      "sha256": "09122c5d95fe8ca64bc4ffd42cb419d3c381c7d547291c67cc4f469978cc8437",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Parametric master (melody + 2 drone pipes, reed slots, hole positions). Kept as-is; not fabrication authority (no HUL-P0/HUL-P1 evidence yet)."
+    },
+    {
+      "path": "wolfram/hulusi-wolfram-model.wl",
+      "format": "wolfram-source",
+      "sha256": "0547f3fcf97cba9d3c6819dd89d4c13ea8f0871ed9ea76f294c7a82368b2d356",
+      "authority": "derived_preview",
+      "lossy": false,
+      "notes": "Generated this pass; source-only, not executed. Distinct from existing hulusi-starter.wl."
+    },
+    {
+      "path": "hulusi-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "96e78c1af470efa0f7b07dfe98b2f6359d96213cd88ba5c72c2b699771b92a35",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Master_Inputs sheet + 6 derived sheets; every acoustic-law row is unknown_requires_measurement pending HUL-P0/HUL-P1 bench data."
+    }
+  ],
+  "notes": "OpenSCAD source is the current master; no STEP export yet (out of scope). Gate A (Alpha workspace compile) not yet run. This is a stopped-pipe free-reed instrument (hulusi-bawu class) — production CAD/DXF stays deferred until HUL-P0 (reed coupon) and HUL-P1 (single-pipe control) produce measured evidence per the skill's hulusi-bawu-stopped-pipe-free-reed reference."
+}
